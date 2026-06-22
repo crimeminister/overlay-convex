@@ -1,0 +1,31 @@
+{:paths ["bb" "test"]
+ :tasks
+ {test
+  {:doc "Run unit tests for the shared library"
+   :requires [[clojure.test]
+              [overlay.version-test]
+              [overlay.system-test]]
+   :task (let [{:keys [fail error]} (clojure.test/run-tests 'overlay.version-test 'overlay.system-test)]
+          (when (or (pos? fail) (pos? error))
+           (throw (Exception. "Tests failed"))))}
+
+  check:update
+  {:doc "Run all update checks"
+   :depends [check:update:convex
+             check:update:tree-sitter-convex-lisp
+             check:update:convex-ts-mode]}
+
+  check:update:convex
+  {:doc "Check if a new version of convex is available"
+   :requires [[overlay.version :as v]]
+   :task (v/check-github-package-update "convex" "Convex-Dev/convex")}
+
+  check:update:tree-sitter-convex-lisp
+  {:doc "Check if a new commit of tree-sitter-convex-lisp is available"
+   :requires [[overlay.version :as v]]
+   :task (v/check-github-commit-update "tree-sitter-convex-lisp" "crimeminister/tree-sitter-convex-lisp")}
+
+  check:update:convex-ts-mode
+  {:doc "Check if a new commit of convex-ts-mode is available"
+   :requires [[overlay.version :as v]]
+   :task (v/check-github-commit-update "convex-ts-mode" "crimeminister/convex-ts-mode")}}}
