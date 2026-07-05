@@ -26,8 +26,8 @@ in
   # Tree-sitter parser for Convex Lisp.
   tree-sitter-convex-lisp = self.callPackage ./pkgs/tree-sitter-convex-lisp {
     version = "0.1.0";
-    rev = "ba70b9bf0aa83f800f50fda887ed6a0b8b051e94";
-    hash = "sha256-9jZ7blPehK+6Z2o4U7Id6WslpsfbEPKSt97SFE2ULow=";
+    rev = "1a8aafa9cebe1fa220e21da0ac3ca8a2bdcfd802";
+    hash = "sha256-jvvbeuhEF6jzFQPZUHSBGFHqEqTGF4FLUwpvbNkMWd8=";
   };
 
   # Emacs major mode for Convex Lisp using tree-sitter.
