@@ -33,7 +33,7 @@ in
   # Emacs major mode for Convex Lisp using tree-sitter.
   convex-ts-mode = self.callPackage ./pkgs/convex-ts-mode {
     version = "0.1.0";
-    rev = "b38fb95d2386cb4fa8ac1dda5829bb5d50623cef";
-    hash = "sha256-eMnXxyC7gFZOqa55meScIIeupdPdU8iLxvnJ2GvNRBU=";
+    rev = "41323a24676a46f568bca1c031ffaf7f4d798e84";
+    hash = "sha256-dYeFyjCcaIanyfMltEfmmXGHLAIHaAfFAnAmnWV3PAg=";
   };
 }
