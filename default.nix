@@ -20,7 +20,7 @@ in
   convex = self.callPackage ./pkgs/convex {
     version = "0.8.8";
     hash = "sha256-y6cPEN/MPbcdmQLzmj8sdkBCuCQ2LDKyxWUV1YGE5RY=";
-    mvnHash = "sha256-UeExqvmZouLPR7BCGKg50etk6JYPJGKn2D+lRXpMoVA=";
+    mvnHash = "sha256-uw1nlrKs0q/SqzZdXwW4KwR5hFv+Z3UX9hLqIXpTQrg=";
   };
 
   # Tree-sitter parser for Convex Lisp.
