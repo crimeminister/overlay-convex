@@ -18,9 +18,9 @@ in
 {
   # Decentralized platform for the Internet of Value.
   convex = self.callPackage ./pkgs/convex {
-    version = "0.8.9";
-    hash = "sha256-k5WeeVMJMpCdf5+j5U3jYPwXK4fdoWB7igDYFt5EOGE=";
-    mvnHash = "sha256-uw1nlrKs0q/SqzZdXwW4KwR5hFv+Z3UX9hLqIXpTQrg=";
+    version = "0.8.10";
+    hash = "sha256-D5OQASXB5+UVKX8Xq9PDX8mDFfox2MhziB7xxAo7fxQ=";
+    mvnHash = "sha256-v6m8iSxb6h5XSV17TxSD0nnuD5hwwzqFJoL2td2Z3/8=";
   };
 
   # Tree-sitter parser for Convex Lisp.
