@@ -20,7 +20,12 @@ in
   convex = self.callPackage ./pkgs/convex {
     version = "0.8.10";
     hash = "sha256-D5OQASXB5+UVKX8Xq9PDX8mDFfox2MhziB7xxAo7fxQ=";
-    mvnHash = "sha256-v6m8iSxb6h5XSV17TxSD0nnuD5hwwzqFJoL2td2Z3/8=";
+    mvnHash = {
+      x86_64-linux = "sha256-v6m8iSxb6h5XSV17TxSD0nnuD5hwwzqFJoL2td2Z3/8=";
+      aarch64-linux = "sha256-diWclEqitqF/vXPuHXh981nHYMEYabpGNUUxjSK+P7g=";
+      aarch64-darwin = "sha256-diWclEqitqF/vXPuHXh981nHYMEYabpGNUUxjSK+P7g=";
+      x86_64-darwin = "sha256-diWclEqitqF/vXPuHXh981nHYMEYabpGNUUxjSK+P7g=";
+    }.${stdenv.hostPlatform.system} or (throw "Unsupported system for convex mvnHash: ${stdenv.hostPlatform.system}");
   };
 
   # Tree-sitter parser for Convex Lisp.
