@@ -18,8 +18,8 @@ in
 {
   # Decentralized platform for the Internet of Value.
   convex = self.callPackage ./pkgs/convex {
-    version = "0.8.13";
-    hash = "sha256-wdx0DLHu8OjtX7WfEKoUeRWhrd9amthnuWsNuAe2Cz0=";
+    version = "0.8.14";
+    hash = "sha256-5Cyo3ofivkA9LY80eZh2CTJAHwq0Oaee4J0kwP4p+0s=";
     mvnHash = "sha256-F1R0GXSKIyVh8wvrmyvshyzudmz8K+qJ6f2zEYBHFX4=";
   };
 
