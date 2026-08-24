@@ -30,8 +30,8 @@
   manualMvnArtifacts = [
     "org.apache.maven.plugins:maven-install-plugin:3.1.2"
     "org.apache.maven.plugins:maven-install-plugin:3.1.4"
-    "org.apache.maven.plugins:maven-assembly-plugin:3.7.1"
-    "io.javalin.community.openapi:openapi-annotation-processor:7.2.2"
+    "org.apache.maven.plugins:maven-assembly-plugin:3.8.0"
+    "io.javalin.community.openapi:openapi-annotation-processor:7.2.3"
   ];
 
   installPhase = ''
