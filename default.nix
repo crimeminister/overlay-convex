@@ -18,16 +18,16 @@ in
 {
   # Decentralized platform for the Internet of Value.
   convex = self.callPackage ./pkgs/convex {
-    version = "0.8.16";
-    hash = "sha256-wioqtIwPeAqLYpIafKImu1iTFco10CPVwZd3l81BU04=";
+    version = "0.8.17";
+    hash = "sha256-NoBXxveDKaoXuEVOyJLkoYr5dA1L1MdBacLitfGaQp4=";
     # In newer nixpkgs (e.g. nixos-unstable with Maven >= 3.9.16), buildMavenPackage
     # additionally prunes volatile resolver prefix indexes (prefixes-*.txt in .m2/.meta),
     # which alters the fixed-output derivation hash compared to older nixpkgs (e.g. 26.05).
     mvnHash =
       if lib.versionAtLeast super.maven.version "3.9.16" then
-        "sha256-olVVJo3bul9GI/T3sRj7mfMknpViCGo4zLpGcPxiTN4="
+        "sha256-69fXT359H8aDkr8IiycKldUuUh6IeL0jg7fUoqOJn+0="
       else
-        "sha256-w7DVLLO0ATZMA7xEI1pttl97own55VhP87k9ADoHuBs=";
+        "sha256-tOaUy8368u2hHElMICjSssb2vtRAFcAbAOrEmh5n6tk=";
   };
 
   # Tree-sitter parser for Convex Lisp.
